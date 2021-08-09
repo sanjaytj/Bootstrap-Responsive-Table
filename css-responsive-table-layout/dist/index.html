@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS Responsive Table Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
+
+body {
+  font-family: "Verdana", Helvetica, Arial;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #3b3b3b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  background: #FFFFFF;
+}
+@media screen and (max-width: 580px) {
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.wrapper {
+  padding: 40px;
+  max-width: 800px;
+}
+
+.table {
+  margin: 0 0 40px 0;
+  width: 130%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+}
+@media screen and (max-width: 580px) {
+  .table {
+    display: block;
+  }
+}
+
+.row {
+  display: table-row;
+  background: #f6f6f6;
+}
+.row:nth-of-type(odd) {
+  background: #e9e9e9;
+}
+.row.header {
+  font-weight: 900;
+  color: #ffffff;
+  background: #A9A9A9;
+}
+.row.header2 {
+  font-weight: 900;
+  color: #ffffff;
+  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+}
+.row.green {
+  background: #27ae60;
+}
+.row.blue {
+  background: #2980b9;
+}
+@media screen and (max-width: 580px) {
+  .row {
+    padding: 14px 0 7px;
+    display: block;
+  }
+  .row.header {
+    padding: 0;
+    height: 6px;
+  }
+  .row.header .cell {
+    display: none;
+  }
+  .row .cell {
+    margin-bottom: 10px;
+    padding: 20px;
+    padding: 20px;
+  }
+  .row .cell:before {
+    margin-bottom: 3px;
+    content: attr(data-title);
+    min-width: 98px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #969696;
+    display: block;
+  }
+}
+
+.cell {
+  padding: 12px 15px 15px 14px;
+  display: table-cell;
+}
+@media screen and (max-width: 580px) {
+  .cell {
+    padding: 2px 16px;
+    display: block;
+  }
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  
+  <div class="table">
+    
+    <div class="row header2">
+      <div class="cell">
+        Portable Units
+      </div>
+      <div class="cell">
+        
+      </div>
+      <div class="cell">
+      </div>
+      <div class="cell">
+      </div>
+      <div class="cell">
+      </div>
+      <div class="cell">
+      </div>
+    </div>
+    
+    <div class="row header">
+      <div class="cell">
+        Models
+      </div>
+      <div class="cell">
+        Parameters
+      </div>
+      <div class="cell">
+        OXYN-006L-S 
+      </div>
+      <div class="cell">
+        OXYN-012L-S	&nbsp
+      </div>
+      <div class="cell">
+        OXYN-025L-S	&nbsp
+      </div>
+      <div class="cell">
+        OXYN-050L-M	&nbsp
+      </div>
+    </div>
+    
+    <div class="row" id="odd">
+      <div class="cell" data-title="Models">
+        OXYGEN Specification
+      </div>
+      <div class="cell" data-title="Parameters">
+        Oxygen Purity (%)	
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        93 +/- 3	
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        93 +/- 3	
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        93 +/- 3	
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        93 +/- 3	
+      </div>
+    </div>
+    
+    
+    <div class="row" id="odd">
+    <div class="cell" data-title="Models">
+      
+      </div>
+      <div class="cell" data-title="Parameters">
+        Rated Delivery <br>(litre / min)	
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        6	
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        12	
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        25	
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        50	
+      </div>
+    </div>
+
+<!--   ------------------------------------------------------------ -->
+    
+    <div class="row">
+      <div class="cell" data-title="Models">
+        MECHANICAL Specification	
+      </div>
+      <div class="cell" data-title="Parameters">
+        Size LxBxH (mm)	
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        380 x 410 x 600		
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        470 x 430 x 760
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        470 x 430 x 760	
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        602 x 602 x 1000
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Models">
+        
+      </div>
+      <div class="cell" data-title="Parameters">
+        Net Weight (kg)		
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        13	
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        29
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        34	
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        60
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Models">
+        
+      </div>
+      <div class="cell" data-title="Parameters">
+        Enclosure		
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        Powder coated sheet steel		
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        Powder coated sheet steel	
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        Powder coated sheet steel		
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        Powder coated sheet steel
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="cell" data-title="Models">
+        
+      </div>
+      <div class="cell" data-title="Parameters">
+        Noise (dB)			
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        45+/- 2			
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        50+/- 2	
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        52+/- 2		
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        55+/- 2
+      </div>
+    </div>
+    
+    <!--   ------------------------------------------------------------ -->
+    
+    <div class="row" id="odd">
+      <div class="cell" data-title="Models">
+        Electrical Specification		
+      </div>
+      <div class="cell" data-title="Parameters">
+        Rated Voltage @ Frequency		
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        230V @ 50Hz			
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        230V @ 50Hz	
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        230V @ 50Hz		
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        230V @ 50Hz	
+      </div>
+    </div>
+    
+    <div class="row" id="odd">
+      <div class="cell" data-title="Models">
+        		
+      </div>
+      <div class="cell" data-title="Parameters">
+        Rated Power			
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        0.5HP				
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        1HP		
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        2HP		
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        5HP	
+      </div>
+    </div>
+    
+    <div class="row" id="odd">
+      <div class="cell" data-title="Models">
+        		
+      </div>
+      <div class="cell" data-title="Parameters">
+        Alerts / Alarms				
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        Low Oxygen High temperature				
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        Low Oxygen High temperature		
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        Low Oxygen High temperature		
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        Low Oxygen High temperature	
+      </div>
+    </div>
+
+  <!--   ------------------------------------------------------------ -->
+    
+    <div class="row">
+      <div class="cell" data-title="Models">
+        	Application Areas		
+      </div>
+      <div class="cell" data-title="Parameters">
+        				
+      </div>
+      <div class="cell" data-title="OXYN-006L-S	">
+        Home Use					
+      </div>
+      <div class="cell" data-title="OXYN-012L-S	">
+        Home Use			
+      </div>
+      <div class="cell" data-title="OXYN-025L-S	">
+        Clinics & Health Care Centre			
+      </div>
+      <div class="cell" data-title="OXYN-050L-M ">
+        Clinics & Health Care Centre	
+      </div>
+    </div>
+
+    
+  <!--   ------------------------------------------------------------ -->
+
+  </div>
+  <!--     Table 1 ends here -->
+
+ <!--   ------------------------------------------------------------ -->
+    
+ <div class="table">
+    
+  <div class="row header2">
+    <div class="cell">
+      Skid Mounted Units
+    </div>
+    <div class="cell">
+      
+    </div>
+    <div class="cell">
+    </div>
+    <div class="cell">
+    </div>
+    <div class="cell">
+    </div>
+    <div class="cell">
+    </div>
+  </div>
+  
+  <div class="row header">
+    <div class="cell">
+      Models
+    </div>
+    <div class="cell">
+      Parameters
+    </div>
+    <div class="cell">
+      OXYN-006L-S 
+    </div>
+    <div class="cell">
+      OXYN-012L-S	&nbsp
+    </div>
+    <div class="cell">
+      OXYN-025L-S	&nbsp
+    </div>
+    <div class="cell">
+      OXYN-050L-M	&nbsp
+    </div>
+  </div>
+  
+  <div class="row" id="odd">
+    <div class="cell" data-title="Models">
+      OXYGEN Specification
+    </div>
+    <div class="cell" data-title="Parameters">
+      Oxygen Purity (%)	
+    </div>
+    <div class="cell" data-title="OXYN-006L-S	">
+      93 +/- 3	
+    </div>
+    <div class="cell" data-title="OXYN-012L-S	">
+      93 +/- 3	
+    </div>
+    <div class="cell" data-title="OXYN-025L-S	">
+      93 +/- 3	
+    </div>
+    <div class="cell" data-title="OXYN-050L-M ">
+      93 +/- 3	
+    </div>
+  </div>
+  
+  
+  <div class="row" id="odd">
+  <div class="cell" data-title="Models">
+    
+    </div>
+    <div class="cell" data-title="Parameters">
+      Rated Delivery <br>(litre / min)	
+    </div>
+    <div class="cell" data-title="OXYN-006L-S	">
+      100	
+    </div>
+    <div class="cell" data-title="OXYN-012L-S	">
+      200	
+    </div>
+    <div class="cell" data-title="OXYN-025L-S	">
+      400	
+    </div>
+    <div class="cell" data-title="OXYN-050L-M ">
+      600	
+    </div>
+  </div>
+
+<!--   ------------------------------------------------------------ -->
+  
+  <div class="row">
+    <div class="cell" data-title="Models">
+     Electrical Specification		
+    </div>
+    <div class="cell" data-title="Parameters">
+      Rated Voltage @ Frequency		
+    </div>
+    <div class="cell" data-title="OXYN-006L-S	">
+      3ph 440V @ 50Hz		
+    </div>
+    <div class="cell" data-title="OXYN-012L-S	">
+      3ph 440V @ 50Hz	
+    </div>
+    <div class="cell" data-title="OXYN-025L-S	">
+      3ph 440V @ 50Hz	
+    </div>
+    <div class="cell" data-title="OXYN-050L-M ">
+      3ph 440V @ 50Hz	
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="cell" data-title="Models">
+      
+    </div>
+    <div class="cell" data-title="Parameters">
+      Rated Power		
+    </div>
+    <div class="cell" data-title="OXYN-006L-S	">
+      10HP		
+    </div>
+    <div class="cell" data-title="OXYN-012L-S	">
+      20HP
+    </div>
+    <div class="cell" data-title="OXYN-025L-S	">
+      40HP		
+    </div>
+    <div class="cell" data-title="OXYN-050L-M ">
+      60HP
+    </div>
+  </div>
+  
+  
+  <!--   ------------------------------------------------------------ -->
+  
+  
+<!--   ------------------------------------------------------------ -->
+  
+  <div class="row">
+    <div class="cell" data-title="Models">
+        Application Areas		
+    </div>
+    <div class="cell" data-title="Parameters">
+              
+    </div>
+    <div class="cell" data-title="OXYN-006L-S	">
+      Nursing Homes & Hospitals					
+    </div>
+    <div class="cell" data-title="OXYN-012L-S	">
+      Nursing Homes & Hospitals			
+    </div>
+    <div class="cell" data-title="OXYN-025L-S	">
+      Nursing Homes & Hospitals			
+    </div>
+    <div class="cell" data-title="OXYN-050L-M ">
+      Nursing Homes & Hospitals	
+    </div>
+  </div>
+
+  
+<!--   ------------------------------------------------------------ -->
+
+</div>
+<!--     Table 2 ends here -->
+
+<!--   ------------------------------------------------------------ -->
+  
+  <div class="table">
+    
+<!--     <div class="row header green">
+      <div class="cell">
+        Product
+      </div>
+      <div class="cell">
+        Unit Price
+      </div>
+      <div class="cell">
+        Quantity
+      </div>
+      <div class="cell">
+        Date Sold
+      </div>
+      <div class="cell">
+        Status
+      </div>
+    </div> -->
+    
+<!--     <div class="row">
+      <div class="cell" data-title="Product">
+        Solid oak work table
+      </div>
+      <div class="cell" data-title="Unit Price">
+        $800
+      </div>
+      <div class="cell" data-title="Quantity">
+        10
+      </div>
+      <div class="cell" data-title="Date Sold">
+        03/15/2014
+      </div>
+      <div class="cell" data-title="Status">
+        Waiting for Pickup
+      </div>
+    </div> -->
+    
+<!--     <div class="row">
+      <div class="cell" data-title="Product">
+        Leather iPhone wallet
+      </div>
+      <div class="cell" data-title="Unit Price">
+        $45
+      </div>
+      <div class="cell" data-title="Quantity">
+        120
+      </div>
+      <div class="cell" data-title="Date Sold">
+        02/28/2014
+      </div>
+      <div class="cell" data-title="Status">
+        In Transit
+      </div>
+    </div> -->
+    
+<!--     <div class="row">
+      <div class="cell" data-title="Product">
+        27" Apple Thunderbolt displays
+      </div>
+      <div class="cell" data-title="Unit Price">
+        $1000
+      </div>
+      <div class="cell" data-title="Quantity">
+        25
+      </div>
+      <div class="cell" data-title="Date Sold">
+        02/10/2014
+      </div>
+      <div class="cell" data-title="Status">
+        Delivered
+      </div>
+    </div> -->
+    
+<!--     <div class="row">
+      <div class="cell" data-title="Product">
+        Bose studio headphones
+      </div>
+      <div class="cell" data-title="Unit Price">
+        $60
+      </div>
+      <div class="cell" data-title="Quantity">
+        90
+      </div>
+      <div class="cell" data-title="Date Sold">
+        01/14/2014
+      </div>
+      <div class="cell" data-title="Status">
+        Delivered
+      </div>
+    </div>
+    
+  </div> -->
+  
+<!--   <div class="table">
+    
+    <div class="row header blue">
+      <div class="cell">
+        Username
+      </div>
+      <div class="cell">
+        Email
+      </div>
+      <div class="cell">
+        Password
+      </div>
+      <div class="cell">
+        Active
+      </div>
+    </div> -->
+    
+<!--     <div class="row">
+      <div class="cell" data-title="Username">
+        ninjalug
+      </div>
+      <div class="cell" data-title="Email">
+        misterninja@hotmail.com
+      </div>
+      <div class="cell" data-title="Password">
+        ************
+      </div>
+      <div class="cell" data-title="Active">
+        Yes
+      </div>
+    </div> -->
+    
+<!--     <div class="row">
+      <div class="cell" data-title="Username">
+        jsmith41
+      </div>
+      <div class="cell" data-title="Email">
+        joseph.smith@gmail.com
+      </div>
+      <div class="cell" data-title="Password">
+        ************
+      </div>
+      <div class="cell" data-title="Active">
+        No
+      </div>
+    </div> -->
+    
+<!--     <div class="row">
+      <div class="cell" data-title="Username">
+        1337hax0r15
+      </div>
+      <div class="cell" data-title="Email">
+        hackerdude1000@aol.com
+      </div>
+      <div class="cell" data-title="Password">
+        ************
+      </div>
+      <div class="cell" data-title="Active">
+        Yes
+      </div>
+    </div> -->
+    
+<!--     <div class="row">
+      <div class="cell" data-title="Username">
+        hairyharry19
+      </div>
+      <div class="cell" data-title="Email">
+        harryharry@gmail.com
+      </div>
+      <div class="cell" data-title="Password">
+        ************
+      </div>
+      <div class="cell" data-title="Active">
+        Yes
+      </div>
+    </div> -->
+    
+  </div>
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>
